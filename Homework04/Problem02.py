@@ -13,7 +13,10 @@ class Node:
     def depth(self):
         l = self.left.depth() if self.left else 0
         r = self.right.depth() if self.right else 0
-        return max(l, r) + 1
+
+        max_value = max(r, l)
+
+        return max_value + 1
 
 
 class BinaryTree:
